@@ -24,9 +24,6 @@ external_links_no_follow = true
 # # Whether to set rel="noreferrer" for all external links
 external_links_no_referrer = true
 
-# When set to "true", the generated HTML files are minified.
-minify_html = true
-
 taxonomies = [ 
     {name = "tags", rss = true, paginate_by = 5}, 
 ]

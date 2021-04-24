@@ -32,19 +32,19 @@ $ zola init "natsuokawai.github.io"
 Welcome to Zola!
 Please answer a few questions to get started quickly.
 Any choices made can be changed by modifying the `config.toml` file later.
-> What is the URL of your site? (https://example.com):
-> Do you want to enable Sass compilation? [Y/n]:
-> Do you want to enable syntax highlighting? [y/N]:
-> Do you want to build a search index of the content? [y/N]:
+> What is the URL of your site? (https://example.com): 
+> Do you want to enable Sass compilation? [Y/n]: 
+> Do you want to enable syntax highlighting? [y/N]: 
+> Do you want to build a search index of the content? [y/N]: 
 
-Done! Your site was created in /path/to/blog
+Done! Your site was created in /path/to/natsuokawai.github.io
 
 Get started by moving into the directory and using the built-in server: `zola serve`
 Visit https://www.getzola.org for the full documentation.
 ```
 
 対話形式で URL など聞かれるが、後で簡単に変えられるのでとりえあずすべてデフォルト値で。  
-blog ディレクトリに移動し、`zola serve` コマンドでローカルサーバーが立ち上がる。  
+プロジェクトディレクトリ（`<username>.github.io`）に移動し、`zola serve` コマンドでローカルサーバーが立ち上がる。  
 ブラウザで `http://127.0.0.1:1111/` にアクセスすると "Welcome to Zola!" というページが表示される。  
 
 ## テーマを設定する

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>natsuokawai</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        
+        
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="natsuokawai">
+        
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https:&#x2F;&#x2F;natsuokawai.github.io">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://natsuokawai.github.io/atom.xml">
+
+        
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+      
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+      
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+      
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+      
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+    
+    <body class="list">
+    
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <h1 class="logo"><a href="https:&#x2F;&#x2F;natsuokawai.github.io">natsuokawai</a></h1>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+            <div class="posts">
+                
+                    <article class="post-entry">
+                        
+                    <header class="entry-header">
+                        <a class="entry-link" href="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;reading-note-output-taizen&#x2F;">
+                            <h2>『学びを結果に変える アウトプット大全』を読んだ</h2>
+                        </a>
+                    </header>
+                    <section class=entry-content>
+                        <h3 id="donnaben-ka">どんな本か</h3>
+<p>アウトプットの効用と方法を、筆者の経験と科学的根拠をもとに解説している本</p>
+<h3 id="nazedu-moutosi-tutaka">なぜ読もうと思ったか</h3>
+<p>読んだ本の内容が身になっていないという課題感があり、 本を読んだ内容をアウトプットしたほうが記憶の定着が良いというのはわかっているがなかなか腰が重くてできていなかった。アウトプットのメリットや、継続するための方法などを知ることで、アウトプットすることに対する心理的なハードルを下げられると思い読んでみた。</p>
+
+                    </section>
+                    <footer class="entry-footer">
+                        <time>December 26, 2021</time>
+                    </footer>
+
+                    </article>
+                
+                    <article class="post-entry">
+                        
+                    <header class="entry-header">
+                        <a class="entry-link" href="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;builing-a-blog-with-zola&#x2F;">
+                            <h2>Rust 製静的サイトジェネレーター Zola でブログを構築する</h2>
+                        </a>
+                    </header>
+                    <section class=entry-content>
+                        <p>Rust で書かれている静的サイトジェネレーターである <a href="https://www.getzola.org/">Zola</a> を使ってブログを作ったのでその手順をメモしておく。</p>
+
+                    </section>
+                    <footer class="entry-footer">
+                        <time>April  8, 2021</time>
+                    </footer>
+
+                    </article>
+                
+                    <article class="post-entry">
+                        
+                    <header class="entry-header">
+                        <a class="entry-link" href="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;test&#x2F;">
+                            <h2>テスト</h2>
+                        </a>
+                    </header>
+                    <section class=entry-content>
+                        <p>Zola でブログを構築した。<br />
+テーマは <a href="https://github.com/schoenenberg/zola-paper">Zola-paper</a> を使用。</p>
+
+                    </section>
+                    <footer class="entry-footer">
+                        <time>April  6, 2021</time>
+                    </footer>
+
+                    </article>
+                
+                <footer class="page-footer">
+                    <nav class="pagination">
+                        <!--Hidden Previous-Button-->
+                        <!--Hidden Next-Button-->
+                    </nav>
+                </footer>
+            </div>
+            
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;natsuokawai.github.io">natsuokawai</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+        </footer>
+    
+    </body>
+</html>

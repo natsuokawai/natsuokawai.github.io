@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>natsuokawai - Rust 製静的サイトジェネレーター Zola でブログを構築する</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <!-- Enable responsiveness on mobile devices-->
+        <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+
+        <!-- Standard meta tags -->
+        <meta name="author" content="natsuokawai">
+        <meta name="description" content="Rust で書かれている静的サイトジェネレーターである &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; を使ってブログを作ったのでその手順をメモしておく。">
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="natsuokawai">
+        
+        <meta property="og:title" content="Rust 製静的サイトジェネレーター Zola でブログを構築する">
+        <meta property="og:url" content="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;builing-a-blog-with-zola">
+        <meta property="og:description" content="Rust で書かれている静的サイトジェネレーターである &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; を使ってブログを作ったのでその手順をメモしておく。">
+        
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="2021-04-08">
+        
+        
+        <meta property="article:tags" content="rust"><meta property="article:tags" content="ssg">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;main.css">
+
+        <!-- Feeds -->
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://natsuokawai.github.io/atom.xml">
+
+        
+
+        <script>
+            function setTheme() {
+                const time = new Date();
+      
+                const prev = localStorage.getItem('date');
+                const date = String(time.getMonth() + 1) + '.' + String(time.getDate());
+      
+                const now = time.getTime();
+                let sunrise;
+                let sunset;
+      
+                function setBodyClass() {
+                    if (now > sunrise && now < sunset) return;
+                    document.body.classList.add('dark');
+                }
+      
+                if (date !== prev) {
+                    fetch('https://api.ipgeolocation.io/astronomy?apiKey=5ed37d85103e4defa5df4c5298ed5215')
+                        .then(res => res.json())
+                        .then(data => {
+                            sunrise = data.sunrise.split(':').map(Number);
+                            sunset = data.sunset.split(':').map(Number);
+                    })
+                    .catch(() => {
+                        sunrise = [7, 0];
+                        sunset = [19, 0];
+                    })
+                    .finally(() => {
+                        sunrise = time.setHours(sunrise[0], sunrise[1], 0);
+                        sunset = time.setHours(sunset[0], sunset[1], 0);
+                        setBodyClass();
+                        localStorage.setItem('sunrise', sunrise);
+                        localStorage.setItem('sunset', sunset);
+                    });
+                    localStorage.setItem('date', date);
+                } else {
+                    sunrise = Number(localStorage.getItem('sunrise'));
+                    sunset = Number(localStorage.getItem('sunset'));
+                    setBodyClass();
+                }
+            }
+        </script>
+    </head>
+    
+    <body class="single">
+    
+    <!-- Apply theme -->
+    <script>
+      setTheme();
+    </script>
+
+    
+        <header class="header">
+            <nav class="nav">
+                
+                <p class="logo"><a href="https:&#x2F;&#x2F;natsuokawai.github.io">natsuokawai</a></p>
+                
+                <ul class="menu">
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Rust 製静的サイトジェネレーター Zola でブログを構築する</h1>
+        <div class="post-meta">
+            <span class="post-date">Published: <time>April  8, 2021</time></span>
+            <span>&middot;</span>
+            <span class="post-reading-time">5 min read</span>
+        </div>
+    </header>
+    <div class="post-content"><p>Rust で書かれている静的サイトジェネレーターである <a href="https://www.getzola.org/">Zola</a> を使ってブログを作ったのでその手順をメモしておく。</p>
+<span id="continue-reading"></span><h2 id="zola-puroziekutowozuo-cheng-suru">Zola プロジェクトを作成する</h2>
+<p>まずは Zola をインストールする。私は Mac を使っているので brew で入れた。<br />
+その他の環境の場合は<a href="https://www.getzola.org/documentation/getting-started/installation/">こちら</a>を参照。</p>
+<pre style="background-color:#212121;">
+<code class="language-sh" data-lang="sh"><span style="color:#82aaff;">$ brew install zola
+$ zola</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">version
+</span><span style="color:#82aaff;">zola 0.13.0
+</span></code></pre>
+<p>次に、<code>zola init</code> コマンドを使ってプロジェクトを開始する。<br />
+GitHub Pages で公開したいのでプロジェクト名はここでは <code>&lt;username&gt;.github.io</code> にしておく。</p>
+<pre style="background-color:#212121;">
+<code class="language-sh" data-lang="sh"><span style="color:#82aaff;">$ zola init </span><span style="color:#89ddff;">&quot;</span><span style="color:#c3e88d;">natsuokawai.github.io</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#82aaff;">Welcome to Zola!
+Please answer a few questions to get started quickly.
+Any choices made can be changed by modifying the </span><span style="color:#89ddff;">`</span><span style="color:#82aaff;">config.toml</span><span style="color:#89ddff;">`</span><span style="color:#82aaff;"> file later.
+</span><span style="color:#89ddff;">&gt;</span><span style="color:#eeffff;"> What </span><span style="color:#82aaff;">is the URL of your site</span><span style="color:#89ddff;">?</span><span style="color:#82aaff;"> (https://example.com</span><span style="color:#eeffff;">)</span><span style="color:#82aaff;">: 
+</span><span style="color:#89ddff;">&gt;</span><span style="color:#eeffff;"> Do </span><span style="color:#82aaff;">you want to enable Sass compilation</span><span style="color:#89ddff;">? </span><span style="font-style:italic;color:#c792ea;">[</span><span style="color:#82aaff;">Y/n</span><span style="font-style:italic;color:#c792ea;">]</span><span style="color:#82aaff;">: 
+</span><span style="color:#89ddff;">&gt;</span><span style="color:#eeffff;"> Do </span><span style="color:#82aaff;">you want to enable syntax highlighting</span><span style="color:#89ddff;">? </span><span style="font-style:italic;color:#c792ea;">[</span><span style="color:#82aaff;">y/N</span><span style="font-style:italic;color:#c792ea;">]</span><span style="color:#82aaff;">: 
+</span><span style="color:#89ddff;">&gt;</span><span style="color:#eeffff;"> Do </span><span style="color:#82aaff;">you want to build a search index of the content</span><span style="color:#89ddff;">? </span><span style="font-style:italic;color:#c792ea;">[</span><span style="color:#82aaff;">y/N</span><span style="font-style:italic;color:#c792ea;">]</span><span style="color:#82aaff;">: 
+
+Done! Your site was created in /path/to/natsuokawai.github.io
+
+Get started by moving into the directory and using the built-in server: </span><span style="color:#89ddff;">`</span><span style="color:#82aaff;">zola serve</span><span style="color:#89ddff;">`
+</span><span style="color:#82aaff;">Visit https://www.getzola.org for the full documentation.
+</span></code></pre>
+<p>対話形式で URL など聞かれるが、後で簡単に変えられるのでとりえあずすべてデフォルト値で。<br />
+プロジェクトディレクトリ（<code>&lt;username&gt;.github.io</code>）に移動し、<code>zola serve</code> コマンドでローカルサーバーが立ち上がる。<br />
+ブラウザで <code>http://127.0.0.1:1111/</code> にアクセスすると &quot;Welcome to Zola!&quot; というページが表示される。</p>
+<h2 id="temawoshe-ding-suru">テーマを設定する</h2>
+<p>この後テンプレートなどを編集して自分好みのサイトを作ることもできるが、今回は<a href="https://www.getzola.org/themes/">公式のテーマ一覧ページ</a>からテーマを探してきて、 <code>Zola-paper</code>（このブログでも使っているテーマ）を使うことにした。</p>
+<pre style="background-color:#212121;">
+<code class="language-sh" data-lang="sh"><span style="color:#82aaff;">$ cd themes
+$ git clone https://github.com/schoenenberg/zola-paper.git
+</span></code></pre>
+<p>ダウンロードしたテーマを <code>config.toml</code> で指定することでスタイルが反映される。</p>
+<pre style="background-color:#212121;">
+<code class="language-toml" data-lang="toml"><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">zola-paper</span><span style="color:#89ddff;">&quot;
+
+[markdown]
+</span></code></pre>
+<p>テーマ設定はこれで完了。</p>
+<h3 id="config-toml-noshe-ding">config.toml の設定</h3>
+<p>theme の他にも色々と設定できる項目があり、一旦以下のように編集した。</p>
+<pre style="background-color:#212121;">
+<code class="language-toml" data-lang="toml"><span style="color:#f07178;">base_url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://natsuokawai.github.io</span><span style="color:#89ddff;">&quot;
+
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">natsuokawai</span><span style="color:#89ddff;">&quot;
+
+</span><span style="color:#f07178;">compile_sass </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+
+</span><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">zola-paper</span><span style="color:#89ddff;">&quot;
+
+</span><span style="color:#f07178;">generate_feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+
+</span><span style="color:#f07178;">taxonomies </span><span style="color:#89ddff;">= [ 
+    {</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">tags</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">rss </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true</span><span style="color:#89ddff;">, </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5</span><span style="color:#89ddff;">}, 
+]
+
+[markdown]
+</span><span style="color:#f07178;">highlight_code </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+
+</span><span style="color:#f07178;">highlight_theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">material-dark</span><span style="color:#89ddff;">&quot;
+
+[extra]
+
+</span></code></pre>
+<p>taxonomies の設定は zola-paper の config.toml から引っ張ってきた。<br />
+その他の設定項目については<a href="https://www.getzola.org/documentation/content/section/#front-matter">こちら</a>から。</p>
+<h2 id="ji-shi-nozuo-cheng">記事の作成</h2>
+<p>まず、一覧ページのテンプレートとなる <code>_index.md</code> を content 配下に作成する。<br />
+<code>+++</code> で囲った中にメタ情報を記述する。</p>
+<pre style="background-color:#212121;">
+<code><span style="color:#eeffff;">+++
+sort_by = &quot;date&quot;
+paginate_by = 5 
++++
+</span></code></pre>
+<p>個々の記事についても <code>content/</code> 配下に作成する。<br />
+このとき、<code>foo.md</code> とするとウェブサイト上のパスが <code>/foo</code> になり、<code>foo/bar.md</code> といったようにディレクトリをネストすると <code>foo/bar</code> となる。</p>
+<p><code>content/test.md</code> というファイルを作ってみる。</p>
+<pre style="background-color:#212121;">
+<code class="language-md" data-lang="md"><span style="color:#eeffff;">+++
+title = &quot;テスト&quot;
+date = 2021-04-08
+
+[extra]
+author = &quot;natsuokawai&quot;
+
+[taxonomies]
+tags = [&quot;rust&quot;, &quot;ssg&quot;]
++++
+
+テスト記事
+
+</span><span style="font-style:italic;color:#4a4a4a;">&lt;!-- more --&gt;
+
+</span><span style="color:#eeffff;">こんちには
+</span></code></pre>
+<p><code>_index.md</code> と同じように <code>+++</code> の中にメタ情報を記述する。タグも利用できて便利。</p>
+<p>また本文に <code>&lt;!-- more --&gt;</code> という要素も必要で、これは記事が一覧表示のトップになったときにどこまで表示するかを制御できる。</p>
+<p>これでトップページを表示してみる。</p>
+<p><img src="https://natsuokawai.github.io/builing-a-blog-with-zola/image1.jpg" alt="トップ" /></p>
+<p>記事タイトルをクリックすると詳細ページに飛び、<code>&lt;!-- more --&gt;</code> より下の部分も表示される。</p>
+<p><img src="https://natsuokawai.github.io/builing-a-blog-with-zola/image2.jpg" alt="記事詳細ページ" /></p>
+<p>これでローカルでのブログ開発は可能になった。<br />
+GitHub Pages での公開手順はまたいつか。</p>
+</div>
+    <footer class="post-footer">
+        
+        <ul class="post-tags">
+        
+            <li><a href="https://natsuokawai.github.io/tags/rust/">rust</a></li>
+        
+            <li><a href="https://natsuokawai.github.io/tags/ssg/">ssg</a></li>
+        
+        </ul>
+        
+    </footer>
+</article>
+
+        </main>
+
+        <footer class="footer">
+            <span>&copy; 2021 <a href="https:&#x2F;&#x2F;natsuokawai.github.io">natsuokawai</a></span>
+            <span>&middot;</span>
+            <span>Powered by <a href="https://www.getzola.org" rel="noopener" target="_blank">Zola</a>️</span>
+            <span>&middot;</span>
+            <span>Theme️ <a href="https://github.com/schoenenberg/zola-paper" rel="noopener" target="_blank">Zola-Paper</a></span>
+        </footer>
+    
+    </body>
+</html>

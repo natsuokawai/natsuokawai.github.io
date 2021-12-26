@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+	<title>natsuokawai</title>
+	<link href="https://natsuokawai.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://natsuokawai.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2021-12-26T00:00:00+00:00</updated>
+	<id>https://natsuokawai.github.io/atom.xml</id>
+	<entry xml:lang="ja">
+		<title>『学びを結果に変える アウトプット大全』を読んだ</title>
+		<published>2021-12-26T00:00:00+00:00</published>
+		<updated>2021-12-26T00:00:00+00:00</updated>
+		<link href="https://natsuokawai.github.io/reading-note-output-taizen/" type="text/html"/>
+		<id>https://natsuokawai.github.io/reading-note-output-taizen/</id>
+		<content type="html">&lt;h3 id=&quot;donnaben-ka&quot;&gt;どんな本か&lt;&#x2F;h3&gt;
+&lt;p&gt;アウトプットの効用と方法を、筆者の経験と科学的根拠をもとに解説している本&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;nazedu-moutosi-tutaka&quot;&gt;なぜ読もうと思ったか&lt;&#x2F;h3&gt;
+&lt;p&gt;読んだ本の内容が身になっていないという課題感があり、 本を読んだ内容をアウトプットしたほうが記憶の定着が良いというのはわかっているがなかなか腰が重くてできていなかった。アウトプットのメリットや、継続するための方法などを知ることで、アウトプットすることに対する心理的なハードルを下げられると思い読んでみた。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h3 id=&quot;zhang-li-te&quot;&gt;章立て&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;アウトプットの基本法則&lt;&#x2F;li&gt;
+&lt;li&gt;科学的に裏付けられた、伝わる話し方&lt;&#x2F;li&gt;
+&lt;li&gt;能力を最大限に引き出す書き方&lt;&#x2F;li&gt;
+&lt;li&gt;圧倒的に結果を出す人の行動力&lt;&#x2F;li&gt;
+&lt;li&gt;アウトプット力を高める7つのトレーニング法&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;gan-xiang&quot;&gt;感想&lt;&#x2F;h3&gt;
+&lt;p&gt;アウトプットのパターンを話す・書く・行動するの3つに分類し、それぞれについてメソッドを見開き1ページ完結で20〜30個紹介する形式で、興味のあるところから読んでいきやすい。&lt;br &#x2F;&gt;
+自分の問題を整理すると、時間が確保できないことと書くことに対する心理的ハードルの高さが課題だと感じた。時間に関しては、SNSをぼーっと眺めるなど無駄なことをしている時間が多い、心理的な面に関しては、そもそも文章を書くことに対して抵抗がある、アウトプットの完成度を（無意識のうちに）求めすぎてしまって作業に時間がかかってしまうなど。&lt;br &#x2F;&gt;
+どうすればよいかというと、小さくて良いので毎日やること、型を決めること、なるべく紙とペンを使うことを意識するのが良さそう。&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;間隔が開くとハードルが高くなるので、すぐ終わるような小さいタスクを毎朝やるようにする
+&lt;ul&gt;
+&lt;li&gt;その日のTODOを書き出す&lt;&#x2F;li&gt;
+&lt;li&gt;一日の終わりに日記をつける&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;アウトプットの型を定める
+&lt;ul&gt;
+&lt;li&gt;TODOはPDFで表を作って印刷しておき、それを埋めるようにする&lt;&#x2F;li&gt;
+&lt;li&gt;日記だったら5分で100字（1行約30文字として3行）書く&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;なるべく紙とペンを使う
+&lt;ul&gt;
+&lt;li&gt;これは主に時間確保のためで、普段ツイッターやインスタを見ている時間が多いので、そもそもスマートフォンに触れる時間を減らす&lt;&#x2F;li&gt;
+&lt;li&gt;科学的にはキーボードよりも紙とペンのが記憶の定着が良いらしいがそんなに重要視していない&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;まずは毎日の日記とTODOからはじめてみようと思う。&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="ja">
+		<title>Rust 製静的サイトジェネレーター Zola でブログを構築する</title>
+		<published>2021-04-08T00:00:00+00:00</published>
+		<updated>2021-04-08T00:00:00+00:00</updated>
+		<link href="https://natsuokawai.github.io/builing-a-blog-with-zola/" type="text/html"/>
+		<id>https://natsuokawai.github.io/builing-a-blog-with-zola/</id>
+		<content type="html">&lt;p&gt;Rust で書かれている静的サイトジェネレーターである &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt; を使ってブログを作ったのでその手順をメモしておく。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;zola-puroziekutowozuo-cheng-suru&quot;&gt;Zola プロジェクトを作成する&lt;&#x2F;h2&gt;
+&lt;p&gt;まずは Zola をインストールする。私は Mac を使っているので brew で入れた。&lt;br &#x2F;&gt;
+その他の環境の場合は&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;こちら&lt;&#x2F;a&gt;を参照。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;$ brew install zola
+$ zola&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt; --&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;version
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;zola 0.13.0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;次に、&lt;code&gt;zola init&lt;&#x2F;code&gt; コマンドを使ってプロジェクトを開始する。&lt;br &#x2F;&gt;
+GitHub Pages で公開したいのでプロジェクト名はここでは &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;&#x2F;code&gt; にしておく。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;$ zola init &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;natsuokawai.github.io&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;Welcome to Zola!
+Please answer a few questions to get started quickly.
+Any choices made can be changed by modifying the &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;config.toml&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; file later.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt; What &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;is the URL of your site&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt; (https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;: 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;you want to enable Sass compilation&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;Y&#x2F;n&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;: 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;you want to enable syntax highlighting&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;y&#x2F;N&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;: 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;you want to build a search index of the content&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;? &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;y&#x2F;N&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#c792ea;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;: 
+
+Done! Your site was created in &#x2F;path&#x2F;to&#x2F;natsuokawai.github.io
+
+Get started by moving into the directory and using the built-in server: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;zola serve&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;`
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;Visit https:&#x2F;&#x2F;www.getzola.org for the full documentation.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;対話形式で URL など聞かれるが、後で簡単に変えられるのでとりえあずすべてデフォルト値で。&lt;br &#x2F;&gt;
+プロジェクトディレクトリ（&lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;&#x2F;code&gt;）に移動し、&lt;code&gt;zola serve&lt;&#x2F;code&gt; コマンドでローカルサーバーが立ち上がる。&lt;br &#x2F;&gt;
+ブラウザで &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;&lt;&#x2F;code&gt; にアクセスすると &amp;quot;Welcome to Zola!&amp;quot; というページが表示される。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;temawoshe-ding-suru&quot;&gt;テーマを設定する&lt;&#x2F;h2&gt;
+&lt;p&gt;この後テンプレートなどを編集して自分好みのサイトを作ることもできるが、今回は&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;&quot;&gt;公式のテーマ一覧ページ&lt;&#x2F;a&gt;からテーマを探してきて、 &lt;code&gt;Zola-paper&lt;&#x2F;code&gt;（このブログでも使っているテーマ）を使うことにした。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#82aaff;&quot;&gt;$ cd themes
+$ git clone https:&#x2F;&#x2F;github.com&#x2F;schoenenberg&#x2F;zola-paper.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;ダウンロードしたテーマを &lt;code&gt;config.toml&lt;&#x2F;code&gt; で指定することでスタイルが反映される。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;zola-paper&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+
+[markdown]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;テーマ設定はこれで完了。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;config-toml-noshe-ding&quot;&gt;config.toml の設定&lt;&#x2F;h3&gt;
+&lt;p&gt;theme の他にも色々と設定できる項目があり、一旦以下のように編集した。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;base_url &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;https:&#x2F;&#x2F;natsuokawai.github.io&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;natsuokawai&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;compile_sass &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;true
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;zola-paper&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;generate_feed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;true
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;taxonomies &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= [ 
+    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;rss &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;paginate_by &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;}, 
+]
+
+[markdown]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;highlight_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f78c6c;&quot;&gt;true
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07178;&quot;&gt;highlight_theme &lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c3e88d;&quot;&gt;material-dark&lt;&#x2F;span&gt;&lt;span style=&quot;color:#89ddff;&quot;&gt;&amp;quot;
+
+[extra]
+
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;taxonomies の設定は zola-paper の config.toml から引っ張ってきた。&lt;br &#x2F;&gt;
+その他の設定項目については&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;#front-matter&quot;&gt;こちら&lt;&#x2F;a&gt;から。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ji-shi-nozuo-cheng&quot;&gt;記事の作成&lt;&#x2F;h2&gt;
+&lt;p&gt;まず、一覧ページのテンプレートとなる &lt;code&gt;_index.md&lt;&#x2F;code&gt; を content 配下に作成する。&lt;br &#x2F;&gt;
+&lt;code&gt;+++&lt;&#x2F;code&gt; で囲った中にメタ情報を記述する。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;+++
+sort_by = &amp;quot;date&amp;quot;
+paginate_by = 5 
++++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;個々の記事についても &lt;code&gt;content&#x2F;&lt;&#x2F;code&gt; 配下に作成する。&lt;br &#x2F;&gt;
+このとき、&lt;code&gt;foo.md&lt;&#x2F;code&gt; とするとウェブサイト上のパスが &lt;code&gt;&#x2F;foo&lt;&#x2F;code&gt; になり、&lt;code&gt;foo&#x2F;bar.md&lt;&#x2F;code&gt; といったようにディレクトリをネストすると &lt;code&gt;foo&#x2F;bar&lt;&#x2F;code&gt; となる。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;content&#x2F;test.md&lt;&#x2F;code&gt; というファイルを作ってみる。&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#212121;&quot;&gt;
+&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;+++
+title = &amp;quot;テスト&amp;quot;
+date = 2021-04-08
+
+[extra]
+author = &amp;quot;natsuokawai&amp;quot;
+
+[taxonomies]
+tags = [&amp;quot;rust&amp;quot;, &amp;quot;ssg&amp;quot;]
++++
+
+テスト記事
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#4a4a4a;&quot;&gt;&amp;lt;!-- more --&amp;gt;
+
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eeffff;&quot;&gt;こんちには
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;code&gt;_index.md&lt;&#x2F;code&gt; と同じように &lt;code&gt;+++&lt;&#x2F;code&gt; の中にメタ情報を記述する。タグも利用できて便利。&lt;&#x2F;p&gt;
+&lt;p&gt;また本文に &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;&#x2F;code&gt; という要素も必要で、これは記事が一覧表示のトップになったときにどこまで表示するかを制御できる。&lt;&#x2F;p&gt;
+&lt;p&gt;これでトップページを表示してみる。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;builing-a-blog-with-zola&#x2F;image1.jpg&quot; alt=&quot;トップ&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;記事タイトルをクリックすると詳細ページに飛び、&lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;&#x2F;code&gt; より下の部分も表示される。&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;natsuokawai.github.io&#x2F;builing-a-blog-with-zola&#x2F;image2.jpg&quot; alt=&quot;記事詳細ページ&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;これでローカルでのブログ開発は可能になった。&lt;br &#x2F;&gt;
+GitHub Pages での公開手順はまたいつか。&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="ja">
+		<title>テスト</title>
+		<published>2021-04-06T00:00:00+00:00</published>
+		<updated>2021-04-06T00:00:00+00:00</updated>
+		<link href="https://natsuokawai.github.io/test/" type="text/html"/>
+		<id>https://natsuokawai.github.io/test/</id>
+		<content type="html">&lt;p&gt;Zola でブログを構築した。&lt;br &#x2F;&gt;
+テーマは &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;schoenenberg&#x2F;zola-paper&quot;&gt;Zola-paper&lt;&#x2F;a&gt; を使用。&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;</content>
+	</entry>
+</feed>
